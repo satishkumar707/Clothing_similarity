@@ -35,3 +35,9 @@ def Clothing_similarity(input_string,N):
     else:
         result = df1[:N].to_json(orient="values")
         return result
+
+input_string = input('Enter a string to search like black jeans for men: ')
+N = int(input('Enter number of products to be listed like 5 : '))
+result = Clothing_similarity(input_string,N)
+print(result)
+
