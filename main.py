@@ -30,10 +30,10 @@ def Clothing_similarity(input_string,N):
     df1.reset_index(drop=True,inplace=True)
     
     if N>len(df1):
-      result = df1.to_json(orient="values")
+      result = df1.to_list()
       return result
     else:
-        result = df1[:N].to_json(orient="values")
+        result = df1[:N].to_list()
         return result
 
 input_string = input('Enter a string to search like black jeans for men: ')
